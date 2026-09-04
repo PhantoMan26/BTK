@@ -1,0 +1,382 @@
+@import url(
+  "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap"
+);
+
+:root {
+  font-family: Inter, sans-serif;
+
+  color: #ffffff;
+  background: #071b3a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #123b78,
+      #071b3a 60%
+    );
+
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+
+  padding: 30px 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  text-align: center;
+
+  font-family: Cinzel, serif;
+  font-weight: 900;
+
+  color: #f5c518;
+
+  font-size: 1.3rem;
+
+  margin-bottom: 25px;
+
+  letter-spacing: 2px;
+}
+
+.letters-container {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.letters-container p {
+  font-size: 0.7rem;
+
+  letter-spacing: 3px;
+
+  color: #9fb7dc;
+}
+
+.letters {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.letter {
+  width: 48px;
+  height: 55px;
+
+  border: 2px solid #345b95;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: Cinzel, serif;
+
+  font-size: 1.6rem;
+
+  border-radius: 8px;
+
+  color: #345b95;
+
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.letter.unlocked {
+  border-color: #f5c518;
+
+  color: #f5c518;
+
+  box-shadow:
+    0 0 15px
+    rgba(245, 197, 24, 0.3);
+}
+
+.clue-card,
+.success-card,
+.final-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20, 59, 110, 0.95),
+      rgba(7, 27, 58, 0.95)
+    );
+
+  border: 1px solid #f5c518;
+
+  border-radius: 18px;
+
+  padding: 35px 25px;
+
+  box-shadow:
+    0 15px 50px
+    rgba(0, 0, 0, 0.35);
+}
+
+.station {
+  color: #f5c518;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 15px;
+
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Cinzel, serif;
+
+  text-align: center;
+}
+
+.clue-card h1 {
+  margin-top: 0;
+
+  font-size: 1.8rem;
+}
+
+.divider {
+  width: 70px;
+
+  height: 3px;
+
+  background: #f5c518;
+
+  margin: 20px auto;
+}
+
+.clue-text {
+  text-align: center;
+
+  font-size: 1.15rem;
+
+  line-height: 1.7;
+
+  color: #e5ecfa;
+}
+
+.answer-form {
+  margin-top: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.answer-form input {
+  width: 100%;
+
+  padding: 16px;
+
+  border-radius: 10px;
+
+  border: 2px solid #345b95;
+
+  background: #071b3a;
+
+  color: white;
+
+  outline: none;
+
+  text-align: center;
+
+  font-size: 1rem;
+}
+
+.answer-form input:focus {
+  border-color: #f5c518;
+}
+
+button,
+.final-button {
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #f5c518;
+
+  color: #071b3a;
+
+  font-family: Cinzel, serif;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  text-align: center;
+
+  transition: 0.2s;
+}
+
+button:hover,
+.final-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px
+    rgba(245, 197, 24, 0.3);
+}
+
+.error {
+  text-align: center;
+
+  color: #ff7777;
+}
+
+.success-card {
+  margin-top: 25px;
+
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 3rem;
+}
+
+.success-card h2 {
+  color: #f5c518;
+}
+
+.big-letter {
+  font-family: Cinzel, serif;
+
+  font-size: 5rem;
+
+  color: #f5c518;
+
+  margin: 20px 0;
+
+  text-shadow:
+    0 0 25px
+    rgba(245, 197, 24, 0.5);
+}
+
+.next-clue {
+  border-top:
+    1px solid
+    rgba(245, 197, 24, 0.3);
+
+  margin-top: 25px;
+
+  padding-top: 20px;
+}
+
+.next-clue h3 {
+  color: #f5c518;
+
+  font-size: 0.9rem;
+
+  letter-spacing: 2px;
+}
+
+.next-clue p {
+  line-height: 1.6;
+
+  color: #dce8ff;
+}
+
+.final-card {
+  text-align: center;
+}
+
+.final-card p {
+  line-height: 1.7;
+
+  color: #dce8ff;
+}
+
+.trophy {
+  font-size: 5rem;
+}
+
+.final-word {
+  font-family: Cinzel, serif;
+
+  font-size: 4rem;
+
+  font-weight: 900;
+
+  color: #f5c518;
+
+  margin: 25px 0;
+
+  letter-spacing: 10px;
+}
+
+.victory-text {
+  font-size: 1.1rem;
+}
+
+.background-symbol {
+  position: fixed;
+
+  font-size: 20rem;
+
+  opacity: 0.03;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  pointer-events: none;
+}
+
+@media (max-width: 500px) {
+  .page {
+    padding: 20px 15px;
+  }
+
+  .clue-card,
+  .success-card,
+  .final-card {
+    padding: 28px 18px;
+  }
+
+  .letter {
+    width: 42px;
+    height: 50px;
+  }
+
+  .final-word {
+    font-size: 3rem;
+  }
+}
