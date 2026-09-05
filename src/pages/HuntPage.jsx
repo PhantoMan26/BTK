@@ -12,7 +12,7 @@ function HuntPage() {
   const clue = clues[clueId];
 
   const [solved, setSolved] = useState(() => {
-    return localStorage.getItem(
+    return sessionStorage.getItem(
       `solved-${clueId}`
     ) === "true";
   });
@@ -26,12 +26,12 @@ function HuntPage() {
   }
 
   const handleCorrect = () => {
-    localStorage.setItem(
+    sessionStorage.setItem(
       `solved-${clueId}`,
       "true"
     );
 
-    localStorage.setItem(
+    sessionStorage.setItem(
       `treasure-letter-${clue.station}`,
       clue.letter
     );

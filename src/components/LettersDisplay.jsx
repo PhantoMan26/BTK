@@ -7,7 +7,7 @@ function LettersDisplay() {
 
       <div className="letters">
         {letters.map((letter, index) => {
-          const savedLetter = localStorage.getItem(
+          const savedLetter = sessionStorage.getItem(
             `treasure-letter-${index + 1}`
           );
 
