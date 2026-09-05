@@ -2,7 +2,6 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import { clues } from "../data/clues";
-
 import ClueCard from "../components/ClueCard";
 import AnswerForm from "../components/AnswerForm";
 
@@ -10,17 +9,11 @@ function HuntPage() {
   const { clueId } = useParams();
   const clue = clues[clueId];
 
-  const [solved, setSolved] = useState(() => {
-    return sessionStorage.getItem(
-      `solved-${clueId}`
-    ) === "true";
-  });
+  const [solved, setSolved] = useState(false);
 
   useEffect(() => {
     const isSolved =
-      sessionStorage.getItem(
-        `solved-${clueId}`
-      ) === "true";
+      sessionStorage.getItem(`solved-${clueId}`) === "true";
 
     setSolved(isSolved);
   }, [clueId]);
@@ -33,16 +26,28 @@ function HuntPage() {
     );
   }
 
+  // THIS MUST BE INSIDE HuntPage
+  const handleCorrect = () => {
+    sessionStorage.setItem(
+      `solved-${clueId}`,
+      "true"
+    );
+
+    sessionStorage.setItem(
+      `treasure-letter-${clue.station}`,
+      clue.letter
+    );
+
+    setSolved(true);
+  };
+
   return (
     <main className="page">
-
       <div className="container">
 
         <div className="logo">
-          <span></span>
           BTK - KINCSVADÁSZAT
         </div>
-
 
         <ClueCard clue={clue} />
 
@@ -78,6 +83,7 @@ function HuntPage() {
                 UTOLSÓ PRÓBA →
               </Link>
             )}
+
           </div>
         )}
 
