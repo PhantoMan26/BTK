@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { clues } from "../data/clues";
 
@@ -8,7 +8,6 @@ import AnswerForm from "../components/AnswerForm";
 
 function HuntPage() {
   const { clueId } = useParams();
-
   const clue = clues[clueId];
 
   const [solved, setSolved] = useState(() => {
@@ -17,6 +16,15 @@ function HuntPage() {
     ) === "true";
   });
 
+  useEffect(() => {
+    const isSolved =
+      sessionStorage.getItem(
+        `solved-${clueId}`
+      ) === "true";
+
+    setSolved(isSolved);
+  }, [clueId]);
+
   if (!clue) {
     return (
       <div className="page">
@@ -24,20 +32,6 @@ function HuntPage() {
       </div>
     );
   }
-
-  const handleCorrect = () => {
-    sessionStorage.setItem(
-      `solved-${clueId}`,
-      "true"
-    );
-
-    sessionStorage.setItem(
-      `treasure-letter-${clue.station}`,
-      clue.letter
-    );
-
-    setSolved(true);
-  };
 
   return (
     <main className="page">
