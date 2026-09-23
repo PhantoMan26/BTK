@@ -5,7 +5,7 @@ export const clues = {
     answers: ["zeusz", "zeus"],
     letter: "I",
     nextClue:
-      "A következő QR-kódot ott keresd, ahol az utazók egy pillanatra megpihenhetnek."
+      "Erzsébetnek elege van a gyerekből, hátat fordít a rejtélynek."
   },
 
   athena: {
@@ -14,7 +14,7 @@ export const clues = {
     answers: ["athéné", "athene", "athena"],
     letter: "S",
     nextClue:
-      "A következő nyom közelében valami magasodik föléd, amely régóta őrzi a környéket."
+      "Elege van gyerekekből, hátat fordít nekik egyből."
   },
 
   poseidon: {
@@ -23,7 +23,7 @@ export const clues = {
     answers: ["poszeidón", "poszeidon", "poseidon"],
     letter: "T",
     nextClue:
-      "A következő QR-kódot keresd ott, ahol az emberek összegyűlhetnek."
+      "A járdán, mely keresztül szeli a parkot, indulj el a hungi irányába. Jobbra van egy tábla. Nagy kócsag van rajta, óvd a környezetet tesa!"
   },
 
   hades: {
@@ -32,7 +32,7 @@ export const clues = {
     answers: ["hadész", "hades"],
     letter: "E",
     nextClue:
-      "Már közel jársz az Olümposz titkához. A következő nyom egy olyan helyen vár, ahol a természet veszi körül az embert."
+      "Téglafal mellett két szép csaj, az utolsó kódot a fűben keresd majd."
   },
 
   apollo: {
