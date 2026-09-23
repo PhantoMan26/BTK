@@ -5,7 +5,7 @@ export const clues = {
     answers: ["zeusz", "zeus"],
     letter: "I",
     nextClue:
-      "Erzsébetnek elege van a gyerekből, hátat fordít a rejtélynek."
+      "Szép alkotás a csendélet, nézzük meg hol van Erzsébet."
   },
 
   athena: {
